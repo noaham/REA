@@ -569,7 +569,7 @@ itwist_deg2 := function(ab)
         t := indexes[2];
         u := indexes[3];
         v := indexes[4];
-        result := result + x(s,t)*x(v,l)*iR(i,k,s,u)*R(t,u,j,v);
+        result := result + x(s,t)*x(v,l)*Rinv(i,k,s,u)*R(t,u,j,v);
     end for;
     return result;
 end function;
