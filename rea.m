@@ -861,7 +861,7 @@ DL_inv := function(k)
     c := 0;
     for Iset in Subsets({1..N},k) do
         I := Sort(SetToSequence(Iset));
-        c +:= q^(-2*summer(I))*DLmin(I,I);
+        c +:= q^(-2*(&+I))*DLmin(I,I);
     end for;
     return c;
 end function;
